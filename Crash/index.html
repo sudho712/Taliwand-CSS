@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+</head>
+<body>
+    <main class="p-5">
+        <h1 class="text-center text-green-400">Hello World</h1>
+
+        <div class="w-full h-10 bg-voilet-200 border-voilet-600 border-2 rounded-md my-4">
+            <p class="text-center font-mono font-extrabold">A Div</p>
+        </div>
+
+        <!-- Layout  -->
+         <div class="fixed w-10 h-10 bg-red-500 top-0"></div>
+         <div class="flex justify-between">
+            <div class="h-16 w-10 rounded-full bg-blue-500"></div>
+            <div class="h-16 w-10 rounded-full bg-blue-500"></div>
+            <div class="h-16 w-10 rounded-full bg-blue-500"></div>
+         </div>
+         
+         <!-- Grid  -->
+          <div class="grid grid-cols-3 gap-2 mt-3">
+            <div class="bg-violet-500 h-12"></div>
+            <div class="bg-violet-500 h-12"></div>
+            <div class="bg-red-500 h-12"></div>
+          </div>
+
+          <!-- <div class="md:block hidden">
+            <p> I will appear for device resolution >768px</p>
+          </div>
+
+          <div class="max-md:block hidden">
+            <p> I will appear for device resolution <768px </p>
+          </div> -->
+
+          <button class="my-2 rounded-lg bg-blue-500 px-4 py-2 text-white hover:bg-red-700">Click me</button>
+
+          <ul class="my-2 space-y-2">
+            <li class="bg-white p-2 first:bg-yellow-100">Item 1</li>
+            <li class="bg-white p-2 first:bg-yellow-100 odd:bg-blue-200 even:bg-green-200">Item 2</li>
+            <li class="bg-white p-2 first:bg-yellow-100 odd:bg-blue-200 even:bg-green-200">Item 3</li>
+            <li class="bg-white p-2 first:bg-yellow-100 odd:bg-blue-200 even:bg-green-200">Item 4</li>
+            <li class="bg-white p-2 first:bg-yellow-100 odd:bg-blue-200 even:bg-green-200">Item 5</li>
+          </ul>
+
+          <!--  Dark Mode  -->
+            <div class="m-10 rounded-lg bg-white px-6 py-8 shadow-xl ring-1 ring-slate-900/5 dark:bg-black">
+                <h3 class="text-base font-medimum tracking-tight text-slate-900">This is the text element </h3>
+                <p class="mt-2 text-sm-2 text-slate-500">This is an even longer p tag element </p>
+                <button id="toggleDark" class="text-blue-900 px-4 py-2 text-sm font-medium mt-8 bg-blue-100 rounded-md" onclick="document.body.classListToggle('dark')">Toggle Dark Mode</button>
+            </div>
+
+            <p class="text-2xl text-chestnut bg-stone-100 p-2">Chestnut Color</p>
+    </main>
+    
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", () => {
+    const toggleDark = document.getElementById('toggleDark');
+    
+    if (toggleDark) { // Ensure element exists
+        toggleDark.addEventListener('click', function () {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+            } else {
+                document.documentElement.classList.add('dark');
+            }
+            alert("click");
+        });
+    }
+});
+
+    </script>
+</body>
+</html>
